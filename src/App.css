@@ -1,0 +1,49 @@
+.home-background {
+  background-image: url("https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/hero.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-block-start: var(--padding-block-start);
+  padding-block-end: var(--padding-block-end);
+}
+
+.background-content {
+  font-size: 65px;
+  font-size: 4.3333333333333rem;
+  font-weight: normal;
+  font-family: "Cinzel", serif;
+  line-height: 1.4em;
+
+  display: flex;
+  justify-content: center;
+  background-transition: 0.3s;
+  margin-top: 0%;
+  margin-bottom: 0%;
+  margin-left: 0%;
+  margin-right: 50%;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.menu-item:hover  .menu-link:before {
+  width: calc(100% - 1.2em);
+  background-color: rgb(168, 110, 59);
+  transform: scale(1, 1) translate(50%, 0);
+}
+
+.menu-link:hover {
+  
+  color: rgb(168, 110, 59);
+  
+}
+
+
+
+.menu-link:before {
+  content: "";
+  position: absolute;
+  right: 50%;
+  height: 1px;
+  transition: transform .3sease-in-out, color .0sease-in-out;
+}
