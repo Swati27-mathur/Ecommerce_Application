@@ -13,7 +13,6 @@
   font-weight: normal;
   font-family: "Cinzel", serif;
   line-height: 1.4em;
-
   display: flex;
   justify-content: center;
   background-transition: 0.3s;
@@ -26,24 +25,52 @@
   padding-left: 0px;
   padding-right: 0px;
 }
-.menu-item:hover  .menu-link:before {
+.menu-item:hover .menu-link:before {
   width: calc(100% - 1.2em);
   background-color: rgb(168, 110, 59);
   transform: scale(1, 1) translate(50%, 0);
 }
 
-.menu-link:hover {
-  
-  color: rgb(168, 110, 59);
-  
+.menu-item {
+  position: relative;
+  list-style-type: none;
 }
 
-
+.menu-link:hover {
+  color: rgb(168, 110, 59);
+}
 
 .menu-link:before {
   content: "";
   position: absolute;
+  width: 100%;
   right: 50%;
   height: 1px;
-  transition: transform .3sease-in-out, color .0sease-in-out;
+  background-color: transparent;
+  transform: scale(0, 0) translate(-50%, 0);
+  transition: transform 0.3sease-in-out, color 0sease-in-out;
+}
+
+.menu-current {
+  color: rgb(168, 110, 59);
+  text-transform: uppercase;
+}
+
+/* .menu-currentline{
+  content: "";
+  position: absolute;
+  width: 100%;
+  right: 50%;
+  height: 1px;
+  background-color: transparent;
+  transform: scale(0, 0) translate(-50%, 0);
+  transition: transform 0.3sease-in-out, color 0sease-in-out;
+  text-transform: uppercase;
+} */
+.menu-link {
+text-decoration: none;
+padding: 0 1em;
+display: inline-block;
+transition: all .2slinear;
+text-transform: uppercase;
 }
