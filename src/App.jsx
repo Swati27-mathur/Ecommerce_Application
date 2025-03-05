@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "./Carousel";
 import "./App.css";
 import {
   Disclosure,
@@ -33,7 +34,7 @@ const App = () => {
     <>
       <Disclosure as="nav" className="bg-white">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
-          <div className="relative flex h-16 items-center justify-between">
+          <div className="relative flex h-20 items-center justify-between ">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* Mobile menu button*/}
               <DisclosureButton className="group relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:ring-2 focus:ring-white focus:outline-hidden focus:ring-inset">
@@ -179,6 +180,9 @@ const App = () => {
       <div className=" home-background">
         <h6 className="background-content">The new ring sensation</h6>
       </div>
+      <Carousel
+
+      />
     </>
   );
 };
