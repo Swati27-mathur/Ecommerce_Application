@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import image1 from './assets/image/crousel/logo.png';
 import image2 from './assets/image/crousel/ring.jpg';
+import image3 from './assets/image/crousel/crausel-logo-006.png';
 
 
 
 const Carousel = () => {
-  const images = [image1,image2];
+  const images = [image1,image2,image3,image1,image2,image3,image1,image2,image3];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -19,13 +20,21 @@ const Carousel = () => {
     );
   };
 
-  return (
-    <div className="relative max-w-3xl mx-auto overflow-hidden">
-      <div
-        className="w-full h-64 bg-center bg-cover"
-        style={{ backgroundImage: `url(${images[currentIndex]})` }}
-      ></div>
+ 
 
+  return (
+    <div className="relative overflow-hidden h-40 ">
+       <div className="grid grid-cols-3 gap-4 ">
+        <div className="col-span-1 border-x-[1px] border-y-[1px] border-gray-300 ">
+          <img src={images[currentIndex]} alt={`Image ${currentIndex}`} className="size-40 mx-auto bg-linear-to-r p-[26px]" />
+        </div>
+        <div className="col-span-1 border-x-[1px] border-y-[1px] border-gray-300">
+          <img src={images[currentIndex + 1]} alt={`Image ${currentIndex + 1}`} className="size-40 mx-auto bg-linear-to-r p-[26px]" />
+        </div>
+        <div className="col-span-1 border-x-[1px] border-y-[1px] border-gray-300">
+          <img src={images[currentIndex + 2]} alt={`Image ${currentIndex + 2}`} className="size-40  mx-auto bg-linear-to-r p-[26px]" />
+        </div>
+      </div>
       {/* Previous Button */}
       <button
         onClick={goToPrev}
@@ -45,13 +54,13 @@ const Carousel = () => {
       {/* Indicators */}
       <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
         {images.map((_, index) => (
-          <div
+          <span
             key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={`w-3 h-3 rounded-full cursor-pointer ${
-              index === currentIndex ? 'bg-white' : 'bg-gray-400'
+            className={`w-3 h-3 rounded-full bg-white cursor-pointer ${
+              index === currentIndex ? "bg-amber-700 " :" bg-slate-300 " 
             }`}
-          ></div>
+            onClick={() => setCurrentIndex(index)}
+          ></span>
         ))}
       </div>
     </div>

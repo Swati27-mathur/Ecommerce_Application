@@ -180,9 +180,7 @@ const App = () => {
       <div className=" home-background">
         <h6 className="background-content">The new ring sensation</h6>
       </div>
-      <Carousel
-
-      />
+      <div className="mt-6 mb-12 "><Carousel/></div>
     </>
   );
 };
