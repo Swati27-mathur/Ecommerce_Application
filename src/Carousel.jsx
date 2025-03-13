@@ -23,7 +23,7 @@ const Carousel = () => {
  
 
   return (
-    <div className="relative overflow-hidden h-40 ">
+    <div className="relative  h-40 ">
        <div className="grid grid-cols-3 gap-4 ">
         <div className="col-span-1 border-x-[1px] border-y-[1px] border-gray-300 ">
           <img src={images[currentIndex]} alt={`Image ${currentIndex}`} className="size-40 mx-auto bg-linear-to-r p-[26px]" />
@@ -52,12 +52,12 @@ const Carousel = () => {
       </button>
 
       {/* Indicators */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+      <div className="absolute  left-1/2 transform -translate-x-1/2 flex space-x-2 mt-[30px]">
         {images.map((_, index) => (
           <span
             key={index}
             className={`w-3 h-3 rounded-full bg-white cursor-pointer ${
-              index === currentIndex ? "bg-amber-700 " :" bg-slate-300 " 
+              index === currentIndex ? " bg-orange-400" :" bg-slate-400 " 
             }`}
             onClick={() => setCurrentIndex(index)}
           ></span>

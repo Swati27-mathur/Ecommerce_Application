@@ -11,7 +11,12 @@ import {
   MenuItems,
 } from "@headlessui/react";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import tredimage1 from "./assets/image/tranding/bracelet.jpg";
+import tredimage2 from "./assets/image/tranding/earrings-05.jpg";
+import tredingimage3 from "./assets/image/tranding/earrings-06.jpg";
+import tredingimage4 from "./assets/image/tranding/earrings.jpg";
+import uniquepiece1 from "./assets/image/tranding/bg-02.jpg";
+import uniquepiece2 from "./assets/image/tranding/bg-01.jpg";
 
 const navigation = [
   { name: "Rings", href: "#", current: true },
@@ -80,7 +85,11 @@ const App = () => {
             </div>
 
             <div className="flex items-center justify-center w-28">
-               <img  className ="max-w-{4px}" alt="" src="https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/logo-retina.png"/>
+              <img
+                className="max-w-{4px}"
+                alt=""
+                src="https://websitedemos.net/blingg-jewelry-store-04/wp-content/uploads/sites/1119/2022/08/logo-retina.png"
+              />
             </div>
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
               <div className="flex space-x-2">
@@ -180,7 +189,85 @@ const App = () => {
       <div className=" home-background">
         <h6 className="background-content">The new ring sensation</h6>
       </div>
-      <div className="mt-6 mb-12 "><Carousel/></div>
+      {/* Carousel Section */}
+      <div className="mt-6 mb-12 ">
+        <Carousel />
+      </div>
+      {/* popular products Section */}
+      <div className="mt-[80px] grid justify-center ">
+        <p className="text-gray-500">Popular Products</p>
+      </div>
+      <div className="mt-[2px] grid justify-center mb-[50px]">
+        <h6 className="text-4xl uppercase">Trending Now</h6>
+      </div>
+      <div className="grid grid-cols-4 gap-4">
+        <div>
+          <img
+            src={tredimage1}
+            alt="trending image"
+            className=" w-[300px] h-[350px] "
+          />
+          <h6 className="text-2xl mt-4 ml-8 ">Product Name 1</h6>
+          <p className="text-bold ml-8">450</p>
+        </div>
+        <div>
+          <img
+            src={tredimage2}
+            alt="trending image"
+            className=" w-[300px] h-[350px] "
+          />
+          <h6 className="text-2xl mt-4 ml-8 ">Product Name 1</h6>
+          <p className="text-bold ml-8">450</p>
+        </div>
+        <div>
+          <img
+            src={tredingimage3}
+            alt="trending image"
+            className=" w-[300px] h-[350px] "
+          />
+          <h6 className="text-2xl mt-4 ml-8 ">Product Name 1</h6>
+          <p className="text-bold ml-8">450</p>
+        </div>
+        <div>
+          <img
+            src={tredingimage4}
+            alt="trending image"
+            className=" w-[300px] h-[350px] "
+          />
+          <h6 className="text-2xl mt-4 ml-8 ">Product Name 1</h6>
+          <p className="text-bold ml-8">450</p>
+        </div>
+      </div>
+      {/* unique pieces Section */}
+      <div className="grid grid-cols-3 gap-4">
+        <div className="mt-[80px] grid justify-center ">
+          <p className="text-gray-500">Unique pieces</p>
+        </div>
+        {/* <div className="flex relative">
+          <img
+            src={uniquepiece1}
+            alt="trending image"
+            className=" w-[300px] h-[350px] mt-44 "
+          />
+
+          <div className="  ">
+            <img
+              src={uniquepiece2}
+              alt="trending image"
+              className=" w-[410px] h-[800px] "
+            />
+          </div>
+        </div> */}
+        <div class="relative justify-self-end col-span-2 ">
+          <img
+            src={uniquepiece1}
+            alt="Image 1"
+            class="absolute w-[400px] object-cover mr-[180px] h-[600px] right-1/2  top-28 md:hidden sm:hidden"
+          />
+
+          <img src={uniquepiece2} alt="Image 2" class=" static" />
+        </div>
+      </div>
     </>
   );
 };
