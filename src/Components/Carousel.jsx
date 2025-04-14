@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import image1 from './assets/image/crousel/logo.png';
-import image2 from './assets/image/crousel/ring.jpg';
-import image3 from './assets/image/crousel/crausel-logo-006.png';
+import image1 from '../assets/image/crousel/logo.png';
+import image2 from '../assets/image/crousel/ring.jpg';
+import image3 from '../assets/image/crousel/crausel-logo-006.png';
 
 
 
